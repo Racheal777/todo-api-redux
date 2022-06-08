@@ -1,13 +1,13 @@
-# POST http://localhost:7000/savepost
-# Content-Type: application/json
+POST http://localhost:7000/savepost
+Content-Type: application/json
 
-# {   
-#     "text": "play"
-# }
+{   
+    "text": "workout"
+}
 
 //GET http://localhost:7000/gettask
 
 //PUT http://localhost:7000/update/20eb0dbe-0d5c-49fc-8260-fc2a9404ea3a
 
 
-DELETE http://localhost:7000/delete/20eb0dbe-0d5c-49fc-8260-fc2a9404ea3a
+//DELETE http://localhost:7000/delete/20eb0dbe-0d5c-49fc-8260-fc2a9404ea3a

@@ -67,7 +67,12 @@ app.post('/savepost', (req, res) => {
 
 //get request
 app.get('/gettask', (req, res) => {
-    res.status(200).json(tasks)
+    try {
+        res.status(200).json(tasks)  
+    } catch (error) {
+       console.log(error) 
+    }
+    
 })
 
 //update
