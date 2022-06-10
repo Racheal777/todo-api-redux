@@ -84,17 +84,22 @@ app.put('/update/:id', (req, res) => {
     console.log(findmatch)
 //updating the task
     tasks = tasks.map(task => {
-        console.log(task)
+        
         return task.id === id ? {...task, isCompleted: !task.isCompleted} : {...task}
     })
 
-    res.status(200).json(findmatch)
+    res.status(200).json(tasks)
+    console.log(tasks)
+    
 })
 
 app.delete('/delete/:id', (req, res) => {
     const { id } = req.params
-    tasks = tasks.filter(task => task.id !== id)
-    res.status(200).json(tasks)
+    const findmatch = tasks.find(task => task.id === id)
+     tasks = tasks.filter(task => task.id !== id)
+    res.status(200).json(findmatch)
+    console.log(findmatch)
+    console.log(tasks)
 
 })
 
