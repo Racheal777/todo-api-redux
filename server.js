@@ -14,29 +14,29 @@ app.use(cors())
 
 //dummy data
 let tasks = [
-    {
-        id: "724b181a-dc71-41c0-9f02-bc6cd1920748",
-        text: "visit a friend",
-        isCompleted: false
-    },
+    // {
+    //     id: "724b181a-dc71-41c0-9f02-bc6cd1920748",
+    //     text: "visit a friend",
+    //     isCompleted: false
+    // },
 
-    {
-        id: "6bf78456-48be-49fd-bbc1-a327cc0e36bd",
-        text: "go for jogging",
-        isCompleted: false
-    },
+    // {
+    //     id: "6bf78456-48be-49fd-bbc1-a327cc0e36bd",
+    //     text: "go for jogging",
+    //     isCompleted: false
+    // },
 
-    {
-        id: "1eff8beb-4605-470c-ad36-2e37ff0c6367",
-        text: "edit the article",
-        isCompleted: false
-    },
+    // {
+    //     id: "1eff8beb-4605-470c-ad36-2e37ff0c6367",
+    //     text: "edit the article",
+    //     isCompleted: false
+    // },
 
-    {
-        id: "da042f24-7783-4789-9cc4-26406e047e04",
-        text: "call my dad",
-        isCompleted: false
-    },
+    // {
+    //     id: "da042f24-7783-4789-9cc4-26406e047e04",
+    //     text: "call my dad",
+    //     isCompleted: false
+    // },
 
 ]
 
@@ -83,8 +83,7 @@ app.put('/update/:id', (req, res) => {
 
     console.log(findmatch)
 //updating the task
-    tasks = tasks.map(task => {
-        
+    tasks = tasks.map(task => { 
         return task.id === id ? {...task, isCompleted: !task.isCompleted} : {...task}
     })
 
